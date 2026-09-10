@@ -669,7 +669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a751f914b93b38044aff475965bd5d1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PulseObject
-  _pulseColor: {r: 1, g: 1, b: 1, a: 0}
+  _flickerColor: {r: 0, g: 0, b: 0, a: 0}
   _duration: 0.2
   _coldown: 5
 --- !u!1660057539 &9223372036854775807
