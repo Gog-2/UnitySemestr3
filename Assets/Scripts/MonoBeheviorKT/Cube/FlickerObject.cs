@@ -5,7 +5,7 @@ using UnityEngine;
 public class FlickerObject : MonoBehaviour
 {
     [Header("Color Settings")]
-    [SerializeField] private Color _pulseColor;
+    [SerializeField] private Color _flickerColor;
     [SerializeField] private float _duration = 1f;
     [SerializeField] private float _coldown = 2f;
     
@@ -25,7 +25,7 @@ public class FlickerObject : MonoBehaviour
 
     private void StartCycle()
     {
-            ChangingColor(_pulseColor, _cachedColor).Forget();
+            ChangingColor(_flickerColor, _cachedColor).Forget();
     }
 
     private async UniTaskVoid ChangingColor(Color baseColor, Color endColor)
