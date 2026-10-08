@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c40ded436bc34ecf937a2ebbb4110c43, type: 3}
+  m_Name: FactoryCFG
+  m_EditorClassIdentifier: Assembly-CSharp::SpaceInveidors.Enemy.SOEnemiesFactory
+  PrefabsEnemies:
+  - {fileID: 8425392176498979666, guid: 828340933602c2b48afb83ea491a047e, type: 3}
+  - {fileID: 3395307356267358501, guid: b699c76a34ad6ce48897c3dc6ee80f01, type: 3}
+  VerticalAmmout: 3
+  HorizontalAmmout: 6
+  XOffSet: 1.42
+  YOffSet: 1.42
+  VerticalPerWave: 0
+  HorizontalPerWave: 1
+  HealthPerWave: 0
+  ScorePerWave: 0
+  MaxVerticalAmount: 8
+  MaxHorizontalAmount: 12
