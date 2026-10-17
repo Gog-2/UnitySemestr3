@@ -1,4 +1,4 @@
-﻿// CHANGE LOG
+// CHANGE LOG
 // 
 // CHANGES || version VERSION
 //
@@ -337,20 +337,28 @@ public class FirstPersonController : MonoBehaviour
 
         if (enableCrouch)
         {
-            if(Input.GetKeyDown(crouchKey) && !holdToCrouch)
+            if (holdToCrouch)
             {
-                Crouch();
+                if (Input.GetKeyDown(crouchKey))
+                {
+                    SetCrouch(true);
+                }
+                else if (Input.GetKeyUp(crouchKey))
+                {
+                    SetCrouch(false);
+                }
             }
-            
-            if(Input.GetKeyDown(crouchKey) && holdToCrouch)
+            else
             {
-                isCrouched = false;
-                Crouch();
-            }
-            else if(Input.GetKeyUp(crouchKey) && holdToCrouch)
-            {
-                isCrouched = true;
-                Crouch();
+                if (Input.GetKeyDown(crouchKey))
+                {
+                    Crouch();
+                }
+
+                if (isCrouched && enableSprint && Input.GetKeyDown(sprintKey))
+                {
+                    SetCrouch(false);
+                }
             }
         }
 
@@ -385,7 +393,7 @@ public class FirstPersonController : MonoBehaviour
             }
 
             // All movement calculations shile sprint is active
-            if (enableSprint && Input.GetKey(sprintKey) && sprintRemaining > 0f && !isSprintCooldown)
+            if (enableSprint && Input.GetKey(sprintKey) && sprintRemaining > 0f && !isSprintCooldown && !isCrouched)
             {
                 targetVelocity = transform.TransformDirection(targetVelocity) * sprintSpeed;
 
@@ -401,11 +409,6 @@ public class FirstPersonController : MonoBehaviour
                 if (velocityChange.x != 0 || velocityChange.z != 0)
                 {
                     isSprinting = true;
-
-                    if (isCrouched)
-                    {
-                        Crouch();
-                    }
 
                     if (hideBarWhenFull && !unlimitedSprint)
                     {
@@ -425,7 +428,8 @@ public class FirstPersonController : MonoBehaviour
                     sprintBarCG.alpha -= 3 * Time.deltaTime;
                 }
 
-                targetVelocity = transform.TransformDirection(targetVelocity) * walkSpeed;
+                float currentSpeed = isCrouched ? (walkSpeed * speedReduction) : walkSpeed;
+                targetVelocity = transform.TransformDirection(targetVelocity) * currentSpeed;
 
                 // Apply a force that attempts to reach our target velocity
                 Vector3 velocity = rb.linearVelocity;
@@ -471,30 +475,29 @@ public class FirstPersonController : MonoBehaviour
         // When crouched and using toggle system, will uncrouch for a jump
         if(isCrouched && !holdToCrouch)
         {
-            Crouch();
+            SetCrouch(false);
+        }
+    }
+
+    private void SetCrouch(bool state)
+    {
+        if (isCrouched == state) return;
+
+        isCrouched = state;
+
+        if (isCrouched)
+        {
+            transform.localScale = new Vector3(originalScale.x, crouchHeight, originalScale.z);
+        }
+        else
+        {
+            transform.localScale = new Vector3(originalScale.x, originalScale.y, originalScale.z);
         }
     }
 
     private void Crouch()
     {
-        // Stands player up to full height
-        // Brings walkSpeed back up to original speed
-        if(isCrouched)
-        {
-            transform.localScale = new Vector3(originalScale.x, originalScale.y, originalScale.z);
-            walkSpeed /= speedReduction;
-
-            isCrouched = false;
-        }
-        // Crouches player down to set height
-        // Reduces walkSpeed
-        else
-        {
-            transform.localScale = new Vector3(originalScale.x, crouchHeight, originalScale.z);
-            walkSpeed *= speedReduction;
-
-            isCrouched = true;
-        }
+        SetCrouch(!isCrouched);
     }
 
     private void HeadBob()
