@@ -3,54 +3,40 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="CMakeProjectFlavorService">
+    <option name="flavorId" value="CMakePlainProjectFlavor" />
+  </component>
+  <component name="CMakeSettings">
+    <configurations />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="8381df63-eeee-49e1-9c3f-cd84f1e1630c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.UnitySemestr3/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.UnitySemestr3/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SpaceInveidors/AudioService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SpaceInveidors/AudioService.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SpaceInveidors/Bullet.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SpaceInveidors/Bullet/Bullet.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SpaceInveidors/Bullet/Bullet.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SpaceInveidors/Bullet/BulletService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SpaceInveidors/Bullet/BulletService.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SpaceInveidors/Bullet/IBulletProvider.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SpaceInveidors/Bullet/IBulletProvider.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SpaceInveidors/Enemy/BaseEnemy.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SpaceInveidors/Enemy/BaseEnemy.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SpaceInveidors/Enemy/EnemiesFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SpaceInveidors/Enemy/EnemiesFactory.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SpaceInveidors/Enemy/EnemiesMover.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SpaceInveidors/Enemy/EnemiesMover.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SpaceInveidors/Enemy/EnemyService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SpaceInveidors/Enemy/EnemyService.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SpaceInveidors/Enemy/IShootingEnemy.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SpaceInveidors/Enemy/IShootingEnemy.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SpaceInveidors/Enemy/SO.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SpaceInveidors/Enemy/SO/SOEnemiesFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SpaceInveidors/Enemy/SO/SOEnemiesFactory.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SpaceInveidors/Enemy/SO/SOEnemiesMover.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SpaceInveidors/Enemy/SO/SOEnemiesMover.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SpaceInveidors/Enemy/ShootingEnemy.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SpaceInveidors/Enemy/ShootingEnemy.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SpaceInveidors/GameService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SpaceInveidors/GameService.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SpaceInveidors/ISoundProvider.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SpaceInveidors/ISoundProvider.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SpaceInveidors/Player/Mover.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SpaceInveidors/Player/Mover.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SpaceInveidors/Player/Shoter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SpaceInveidors/Player/Shoter.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SpaceInveidors/PlayerLivesView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SpaceInveidors/PlayerLivesView.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SpaceInveidors/WaveAnnouncer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SpaceInveidors/WaveAnnouncer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/MenuManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/MenuManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/PassiveCoinsManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/PassiveCoinsManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/UpgradeManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/UpgradeManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/Upgrader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/Upgrader/BuyUnit.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/Upgrader/BuyUnit.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/Upgrader/BuyUpgrade.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/Upgrader/BuyUpgrade.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnitySemestr3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnitySemestr3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ModularFirstPersonController/FirstPersonController/FirstPersonController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ModularFirstPersonController/FirstPersonController/FirstPersonController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Nuclear_reactor/Nuclear_Reactor.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Nuclear_reactor/Nuclear_Reactor.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/Coins/Coin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/Coins/Coin.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/Coins/CoinService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/Coins/CoinService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/Coins/CoinService.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/Coins/CoinService.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/Inventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/Inventory.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/Inventory.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/Singltone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/Singltone.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/WalletManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/WalletManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,8 +47,19 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/858f0765bd8f497aacadfc2cd49efcc020d200/a8/7b236b01/ScriptableObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CustomInspector/Editor/SOAudioEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CustomInspector/SO_Audio.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBeheviorKT/Trap/Trap.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/Coins/CoinPool.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/Coins/CoinService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/Inventory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/MagnetToPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/MenuManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/PassiveCoins.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/Singltone.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/UpgradeManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/Upgrader/BuyStation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/WalletUi.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/OP_Tools/Editor/FloatRangeSliderDrawer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpaceInveidors/AudioService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpaceInveidors/Bullet/BulletPool.cs" root0="FORCE_HIGHLIGHTING" />
@@ -83,7 +80,73 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpaceInveidors/PlayerLivesView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpaceInveidors/WaveAnnouncer.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.4757905428385039" />
+      <entry key="MS500" value="3.4966500612909255" />
+      <entry key="S2" value="6.4974376184747475" />
+      <entry key="S5" value="7.915487495572427" />
+      <entry key="S10" value="8.826581437253273" />
+      <entry key="S30" value="11.605639969443969" />
+      <entry key="S60" value="18.946416683716556" />
+      <entry key="M2" value="33.73115344919791" />
+      <entry key="M5" value="56.259825951669654" />
+      <entry key="M10" value="75.07006505396308" />
+      <entry key="M15" value="92.9600978813579" />
+      <entry key="M30" value="155.39209399834553" />
+      <entry key="H1" value="268.5831645193183" />
+      <entry key="H2" value="398.474421292336" />
+      <entry key="H4" value="502.32002536953854" />
+      <entry key="D1" value="620.0921269304184" />
+      <entry key="W1" value="643.9129105423293" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="9.903740239422099E-56" />
+      <entry key="MS500" value="1.038711970059301E-11" />
+      <entry key="S2" value="0.0025758752857240356" />
+      <entry key="S5" value="0.13708086972610362" />
+      <entry key="S10" value="0.5219450899626669" />
+      <entry key="S30" value="1.3037852899543148" />
+      <entry key="S60" value="1.9085661078816918" />
+      <entry key="M2" value="2.885105292684155" />
+      <entry key="M5" value="4.414673450719423" />
+      <entry key="M10" value="6.66270382633212" />
+      <entry key="M15" value="10.172187910871129" />
+      <entry key="M30" value="24.11986715087215" />
+      <entry key="H1" value="49.64214975547543" />
+      <entry key="H2" value="78.70082541484294" />
+      <entry key="H4" value="101.78703547588812" />
+      <entry key="D1" value="127.84292872564566" />
+      <entry key="W1" value="133.09868740244448" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="1.1304399832963357" />
+      <entry key="MS500" value="3.30813082709318" />
+      <entry key="S2" value="6.3537174721878324" />
+      <entry key="S5" value="7.9493179808592345" />
+      <entry key="S10" value="9.258025555115129" />
+      <entry key="S30" value="12.84595733559388" />
+      <entry key="S60" value="20.779472285957752" />
+      <entry key="M2" value="36.52501614386153" />
+      <entry key="M5" value="60.60310437720629" />
+      <entry key="M10" value="81.68102157782225" />
+      <entry key="M15" value="103.08443968761658" />
+      <entry key="M30" value="179.4603357120127" />
+      <entry key="H1" value="318.1724507156044" />
+      <entry key="H2" value="477.13296184073147" />
+      <entry key="H4" value="604.0795464253323" />
+      <entry key="D1" value="747.9292636904522" />
+      <entry key="W1" value="777.0107356586637" />
+    </decayedShown>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -98,72 +161,72 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C#&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.5.8f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="$USER_HOME$/Unity/Hub/Editor/6000.5.8f1/Editor/Unity" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\Administrator\UnitySemestr3 -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\Administrator\UnitySemestr3" />
       <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="ENV_FILE_PATHS" value="" />
       <option name="REDIRECT_INPUT_PATH" value="" />
-      <option name="PTY_MODE" value="Auto" />
       <option name="MIXED_MODE_DEBUG" value="0" />
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.5.8f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="$USER_HOME$/Unity/Hub/Editor/6000.5.8f1/Editor/Unity" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\Administrator\UnitySemestr3 -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\Administrator\UnitySemestr3" />
       <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="ENV_FILE_PATHS" value="" />
       <option name="REDIRECT_INPUT_PATH" value="" />
-      <option name="PTY_MODE" value="Auto" />
       <option name="MIXED_MODE_DEBUG" value="0" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" useMixedMode="false">
       <option name="allowRunningInParallel" value="false" />
+      <option name="coreClr" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <option name="projectPathOnTarget" />
-      <option name="runtimes">
-        <list />
-      </option>
       <option name="selectedOptions">
         <list />
       </option>
-      <option name="useMixedMode" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" useMixedMode="false">
       <option name="allowRunningInParallel" value="false" />
+      <option name="coreClr" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <option name="projectPathOnTarget" />
-      <option name="runtimes">
-        <list />
-      </option>
       <option name="selectedOptions">
         <list />
       </option>
-      <option name="useMixedMode" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Device" type="UnityDevicePlayer" factoryName="UnityAttachToDevicePlayer">
+    <configuration name="Attach to" type="UnityDevicePlayer" factoryName="UnityAttachToDevicePlayer">
       <method v="2" />
     </configuration>
   </component>
@@ -184,6 +247,9 @@
       <workItem from="1791186899137" duration="4662000" />
       <workItem from="1791280671802" duration="1547000" />
       <workItem from="1791287850657" duration="6730000" />
+      <workItem from="1791445231457" duration="5555000" />
+      <workItem from="1791893182546" duration="8574000" />
+      <workItem from="1792051576116" duration="8694000" />
     </task>
     <servers />
   </component>

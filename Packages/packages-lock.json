@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.annulusgames.alchemy": {
+      "version": "https://github.com/annulusgames/Alchemy.git?path=/Alchemy/Assets/Alchemy",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "55c73043bdc4bc9cc3830596be2c5815ef2f2628"
+    },
     "com.cysharp.unitask": {
       "version": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
       "depth": 0,
@@ -126,7 +133,7 @@
     },
     "com.unity.burst": {
       "version": "1.8.30",
-      "depth": 2,
+      "depth": 1,
       "source": "registry",
       "dependencies": {
         "com.unity.mathematics": "1.2.1",
@@ -177,7 +184,7 @@
       }
     },
     "com.unity.ide.rider": {
-      "version": "3.0.38",
+      "version": "3.0.40",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -224,6 +231,17 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+    "com.unity.probuilder": {
+      "version": "file:com.unity.probuilder",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.unity.shadergraph": "17.0.3",
+        "com.unity.settings-manager": "1.0.3",
+        "com.unity.modules.physics": "1.0.0",
+        "com.unity.modules.imgui": "1.0.0"
+      }
+    },
     "com.unity.render-pipelines.core": {
       "version": "17.5.0",
       "depth": 1,
@@ -256,6 +274,22 @@
     "com.unity.searcher": {
       "version": "4.9.5",
       "depth": 2,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.serialization": {
+      "version": "6.5.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.collections": "2.1.2",
+        "com.unity.burst": "1.7.2"
+      }
+    },
+    "com.unity.settings-manager": {
+      "version": "2.1.1",
+      "depth": 1,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
