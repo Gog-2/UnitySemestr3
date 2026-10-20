@@ -11,32 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8381df63-eeee-49e1-9c3f-cd84f1e1630c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/MenuManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/MenuManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/PassiveCoinsManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/PassiveCoinsManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/UpgradeManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/UpgradeManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/Upgrader.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/Upgrader/BuyUnit.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/Upgrader/BuyUnit.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/Upgrader/BuyUpgrade.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/Upgrader/BuyUpgrade.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnitySemestr3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnitySemestr3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ModularFirstPersonController/FirstPersonController/FirstPersonController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ModularFirstPersonController/FirstPersonController/FirstPersonController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Nuclear_reactor/Nuclear_Reactor.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Nuclear_reactor/Nuclear_Reactor.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/Coins/Coin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/Coins/Coin.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/Coins/CoinService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/Coins/CoinService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/Coins/CoinService.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/Coins/CoinService.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/Inventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/Inventory.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/Inventory.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/Singltone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/Singltone.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/WalletManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/WalletManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
