@@ -1,9 +1,11 @@
 // CHANGE LOG
-// 
+//
 // CHANGES || version VERSION
 //
 // "Enable/Disable Headbob, Changed look rotations - should result in reduced camera jitters" || version 1.0.1
+// "Added Esc action (static event) + input blocking" || version 1.0.2
 
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,6 +19,52 @@ using UnityEngine.UI;
 public class FirstPersonController : MonoBehaviour
 {
     private Rigidbody rb;
+
+    #region Esc Action
+    // Подписка из любого места: FirstPersonController.OnEscPressed += MyMethod;
+    // bool = true -> ввод заблокирован, false -> разблокирован
+    public static event Action<bool> OnEscPressed;
+
+    public static bool IsInputBlocked { get; private set; }
+
+    public KeyCode escKey = KeyCode.Escape;
+
+    // Сброс статики (если отключён Domain Reload в настройках Enter Play Mode)
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+    private static void ResetStatics()
+    {
+        OnEscPressed = null;
+        IsInputBlocked = false;
+    }
+
+    // Можно вызывать и из кода (например, закрытие меню кнопкой)
+    public void SetInputBlocked(bool blocked)
+    {
+        if (IsInputBlocked == blocked) return;
+        IsInputBlocked = blocked;
+
+        if (blocked)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            isZoomed = false;
+            isSprinting = false;
+        }
+        else if (lockCursor)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+
+        OnEscPressed?.Invoke(blocked);
+    }
+
+    private void OnDestroy()
+    {
+        // Если контроллер уничтожен в заблокированном состоянии — сбрасываем флаг
+        IsInputBlocked = false;
+    }
+    #endregion
 
     #region Camera Movement Variables
 
@@ -151,6 +199,8 @@ public class FirstPersonController : MonoBehaviour
 
     void Start()
     {
+        IsInputBlocked = false;
+
         if(lockCursor)
         {
             Cursor.lockState = CursorLockMode.Locked;
@@ -202,10 +252,16 @@ public class FirstPersonController : MonoBehaviour
 
     private void Update()
     {
+        // Esc работает всегда, даже при блокировке
+        if (Input.GetKeyDown(escKey))
+        {
+            SetInputBlocked(!IsInputBlocked);
+        }
+
         #region Camera
 
         // Control camera movement
-        if(cameraCanMove)
+        if(cameraCanMove && !IsInputBlocked)
         {
             yaw = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * mouseSensitivity;
 
@@ -230,31 +286,27 @@ public class FirstPersonController : MonoBehaviour
 
         if (enableZoom)
         {
-            // Changes isZoomed when key is pressed
-            // Behavior for toogle zoom
-            if(Input.GetKeyDown(zoomKey) && !holdToZoom && !isSprinting)
+            if (!IsInputBlocked)
             {
-                if (!isZoomed)
+                // Changes isZoomed when key is pressed
+                // Behavior for toogle zoom
+                if(Input.GetKeyDown(zoomKey) && !holdToZoom && !isSprinting)
                 {
-                    isZoomed = true;
+                    isZoomed = !isZoomed;
                 }
-                else
-                {
-                    isZoomed = false;
-                }
-            }
 
-            // Changes isZoomed when key is pressed
-            // Behavior for hold to zoom
-            if(holdToZoom && !isSprinting)
-            {
-                if(Input.GetKeyDown(zoomKey))
+                // Changes isZoomed when key is pressed
+                // Behavior for hold to zoom
+                if(holdToZoom && !isSprinting)
                 {
-                    isZoomed = true;
-                }
-                else if(Input.GetKeyUp(zoomKey))
-                {
-                    isZoomed = false;
+                    if(Input.GetKeyDown(zoomKey))
+                    {
+                        isZoomed = true;
+                    }
+                    else if(Input.GetKeyUp(zoomKey))
+                    {
+                        isZoomed = false;
+                    }
                 }
             }
 
@@ -298,7 +350,7 @@ public class FirstPersonController : MonoBehaviour
                 sprintRemaining = Mathf.Clamp(sprintRemaining += 1 * Time.deltaTime, 0, sprintDuration);
             }
 
-            // Handles sprint cooldown 
+            // Handles sprint cooldown
             // When sprint remaining == 0 stops sprint ability until hitting cooldown
             if(isSprintCooldown)
             {
@@ -313,7 +365,7 @@ public class FirstPersonController : MonoBehaviour
                 sprintCooldown = sprintCooldownReset;
             }
 
-            // Handles sprintBar 
+            // Handles sprintBar
             if(useSprintBar && !unlimitedSprint)
             {
                 float sprintRemainingPercent = sprintRemaining / sprintDuration;
@@ -326,7 +378,7 @@ public class FirstPersonController : MonoBehaviour
         #region Jump
 
         // Gets input and calls jump method
-        if(enableJump && Input.GetKeyDown(jumpKey) && isGrounded)
+        if(enableJump && !IsInputBlocked && Input.GetKeyDown(jumpKey) && isGrounded)
         {
             Jump();
         }
@@ -335,7 +387,7 @@ public class FirstPersonController : MonoBehaviour
 
         #region Crouch
 
-        if (enableCrouch)
+        if (enableCrouch && !IsInputBlocked)
         {
             if (holdToCrouch)
             {
@@ -378,8 +430,12 @@ public class FirstPersonController : MonoBehaviour
 
         if (playerCanMove)
         {
+            // При блокировке оси = 0, игрок плавно тормозит
+            float h = IsInputBlocked ? 0f : Input.GetAxis("Horizontal");
+            float v = IsInputBlocked ? 0f : Input.GetAxis("Vertical");
+
             // Calculate how fast we should be moving
-            Vector3 targetVelocity = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+            Vector3 targetVelocity = new Vector3(h, 0, v);
 
             // Checks if player is walking and isGrounded
             // Will allow head bob
@@ -393,7 +449,7 @@ public class FirstPersonController : MonoBehaviour
             }
 
             // All movement calculations shile sprint is active
-            if (enableSprint && Input.GetKey(sprintKey) && sprintRemaining > 0f && !isSprintCooldown && !isCrouched)
+            if (enableSprint && !IsInputBlocked && Input.GetKey(sprintKey) && sprintRemaining > 0f && !isSprintCooldown && !isCrouched)
             {
                 targetVelocity = transform.TransformDirection(targetVelocity) * sprintSpeed;
 
@@ -554,7 +610,7 @@ public class FirstPersonController : MonoBehaviour
         EditorGUILayout.Space();
         GUILayout.Label("Modular First Person Controller", new GUIStyle(GUI.skin.label) { alignment = TextAnchor.MiddleCenter, fontStyle = FontStyle.Bold, fontSize = 16 });
         GUILayout.Label("By Jess Case", new GUIStyle(GUI.skin.label) { alignment = TextAnchor.MiddleCenter, fontStyle = FontStyle.Normal, fontSize = 12 });
-        GUILayout.Label("version 1.0.1", new GUIStyle(GUI.skin.label) { alignment = TextAnchor.MiddleCenter, fontStyle = FontStyle.Normal, fontSize = 12 });
+        GUILayout.Label("version 1.0.2", new GUIStyle(GUI.skin.label) { alignment = TextAnchor.MiddleCenter, fontStyle = FontStyle.Normal, fontSize = 12 });
         EditorGUILayout.Space();
 
         #region Camera Setup
@@ -564,7 +620,9 @@ public class FirstPersonController : MonoBehaviour
         EditorGUILayout.Space();
 
         fpc.playerCamera = (Camera)EditorGUILayout.ObjectField(new GUIContent("Camera", "Camera attached to the controller."), fpc.playerCamera, typeof(Camera), true);
+
         fpc.fov = EditorGUILayout.Slider(new GUIContent("Field of View", "The camera’s view angle. Changes the player camera directly."), fpc.fov, fpc.zoomFOV, 179f);
+
         fpc.cameraCanMove = EditorGUILayout.ToggleLeft(new GUIContent("Enable Camera Rotation", "Determines if the camera is allowed to move."), fpc.cameraCanMove);
 
         GUI.enabled = fpc.cameraCanMove;
@@ -578,21 +636,31 @@ public class FirstPersonController : MonoBehaviour
         fpc.crosshair = EditorGUILayout.ToggleLeft(new GUIContent("Auto Crosshair", "Determines if the basic crosshair will be turned on, and sets is to the center of the screen."), fpc.crosshair);
 
         // Only displays crosshair options if crosshair is enabled
-        if(fpc.crosshair) 
-        { 
-            EditorGUI.indentLevel++; 
-            EditorGUILayout.BeginHorizontal(); 
-            EditorGUILayout.PrefixLabel(new GUIContent("Crosshair Image", "Sprite to use as the crosshair.")); 
+        if(fpc.crosshair)
+        {
+            EditorGUI.indentLevel++;
+            EditorGUILayout.BeginHorizontal();
+            EditorGUILayout.PrefixLabel(new GUIContent("Crosshair Image", "Sprite to use as the crosshair."));
             fpc.crosshairImage = (Sprite)EditorGUILayout.ObjectField(fpc.crosshairImage, typeof(Sprite), false);
             EditorGUILayout.EndHorizontal();
 
             EditorGUILayout.BeginHorizontal();
             fpc.crosshairColor = EditorGUILayout.ColorField(new GUIContent("Crosshair Color", "Determines the color of the crosshair."), fpc.crosshairColor);
             EditorGUILayout.EndHorizontal();
-            EditorGUI.indentLevel--; 
+            EditorGUI.indentLevel--;
         }
 
         EditorGUILayout.Space();
+
+        #region Esc Action Setup
+
+        GUILayout.Label("Esc Action", new GUIStyle(GUI.skin.label) { alignment = TextAnchor.MiddleLeft, fontStyle = FontStyle.Bold, fontSize = 13 }, GUILayout.ExpandWidth(true));
+
+        fpc.escKey = (KeyCode)EditorGUILayout.EnumPopup(new GUIContent("Esc Key", "Key that toggles input blocking and fires FirstPersonController.OnEscPressed."), fpc.escKey);
+
+        EditorGUILayout.Space();
+
+        #endregion
 
         #region Camera Zoom Setup
 
@@ -665,7 +733,6 @@ public class FirstPersonController : MonoBehaviour
             fpc.sprintBar = (Image)EditorGUILayout.ObjectField(fpc.sprintBar, typeof(Image), true);
             EditorGUILayout.EndHorizontal();
 
-
             EditorGUILayout.BeginHorizontal();
             fpc.sprintBarWidthPercent = EditorGUILayout.Slider(new GUIContent("Bar Width", "Determines the width of the sprint bar."), fpc.sprintBarWidthPercent, .1f, .5f);
             EditorGUILayout.EndHorizontal();
@@ -673,6 +740,7 @@ public class FirstPersonController : MonoBehaviour
             EditorGUILayout.BeginHorizontal();
             fpc.sprintBarHeightPercent = EditorGUILayout.Slider(new GUIContent("Bar Height", "Determines the height of the sprint bar."), fpc.sprintBarHeightPercent, .001f, .025f);
             EditorGUILayout.EndHorizontal();
+
             EditorGUI.indentLevel--;
         }
         GUI.enabled = true;
@@ -721,7 +789,6 @@ public class FirstPersonController : MonoBehaviour
         EditorGUILayout.Space();
 
         fpc.enableHeadBob = EditorGUILayout.ToggleLeft(new GUIContent("Enable Head Bob", "Determines if the camera will bob while the player is walking."), fpc.enableHeadBob);
-        
 
         GUI.enabled = fpc.enableHeadBob;
         fpc.joint = (Transform)EditorGUILayout.ObjectField(new GUIContent("Camera Joint", "Joint object position is moved while head bob is active."), fpc.joint, typeof(Transform), true);

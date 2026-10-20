@@ -1,6 +1,7 @@
 using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
+using Unity.Collections;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -9,10 +10,12 @@ namespace Nuclear_reactor
     public class CoinService : Singltone<CoinService>
     {
         [SerializeField] private float _spawnColdownBase;
+        [SerializeField] private float _stepForColdown;
         [SerializeField] private CoinPool _pool;
         [SerializeField] private Transform _coinMinPos, _coinMaxPos;
         
-        private float _spawnCol;
+        [SerializeField] 
+        [ReadOnly]private float _spawnCol;
         
         private Vector3 _minPos;
         private Vector3 _maxPos;
@@ -25,8 +28,11 @@ namespace Nuclear_reactor
             base.Awake();
 
             _spawnCol = _spawnColdownBase;
+            
+            UpgradeSpawnSpeed(UpgradeType.SpawnSpeed, 
+                Inventory.Instance.Upgrades[UpgradeType.SpawnSpeed]);
 
-            Inventory.Instance.OnValueChanged += UpgradeSpawnSpeed;
+            Inventory.Instance.OnUpgradeChanged += UpgradeSpawnSpeed;
             
             _minPos = _coinMinPos.position;
             _maxPos = _coinMaxPos.position;
@@ -68,13 +74,13 @@ namespace Nuclear_reactor
         {
             if (upgradeType == UpgradeType.SpawnSpeed)
             {
-                _spawnCol = _spawnColdownBase * Mathf.Pow(value, 1.5f);
+                _spawnCol = _spawnColdownBase - _stepForColdown * (value - 1);
             }
         }
 
         private void OnDisable()
         {
-            Inventory.Instance.OnValueChanged -= UpgradeSpawnSpeed;
+            Inventory.Instance.OnUpgradeChanged -= UpgradeSpawnSpeed;
             _cts?.Cancel();
             _cts?.Dispose();
             _cts = null;

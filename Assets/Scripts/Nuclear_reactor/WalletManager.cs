@@ -7,6 +7,11 @@ public class WalletManager : Singltone<WalletManager>
     [SerializeField] private int _walletBalance;
     public event Action<int> OnValueChanged;
 
+    private void Start()
+    {
+        _walletBalance = PlayerPrefs.GetInt("WalletBalance");
+    }
+
     public void AddCurrency(int value)
     {
         
@@ -31,5 +36,11 @@ public class WalletManager : Singltone<WalletManager>
 
         return false;
 
+    }
+
+    private void OnDisable()
+    {
+        PlayerPrefs.SetInt("WalletBalance",_walletBalance);
+        PlayerPrefs.Save();
     }
 }

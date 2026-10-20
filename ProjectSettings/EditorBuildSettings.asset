@@ -8,5 +8,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MonoBeheviorKT/FlickCubes.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Nuclear_reactor/Menu.unity
+    guid: ed646a3769312e2afa5284c56fb8033d
+  - enabled: 1
+    path: Assets/Scenes/Nuclear_reactor/Nuclear_Reactor.unity
+    guid: 69b1d04f4ff3fd248b8ef8a8750b3380
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
