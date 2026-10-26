@@ -11,7 +11,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8381df63-eeee-49e1-9c3f-cd84f1e1630c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Calculator/CalculationFormulaSO.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Calculator/CalculationFormulaSO.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Calculator/CalculatorSO.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Calculator/CalculatorSO.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Calculator/s_CalculatorStringToResult.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Calculator/s_CalculatorStringToResult.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnitySemestr3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnitySemestr3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Calculator/Calculator.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Calculator/Calculator.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,6 +30,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/3f/013c4118/DivideByZeroException.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/5f/0193ef40/NumberStyles.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/5f/57cb192a/Stack`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Calculator/CalculationFormulaSO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Calculator/CalculationHolder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Calculator/CalculatorSO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Calculator/s_CalculatorStringToResult.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CustomInspector/Editor/SOAudioEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CustomInspector/SO_Audio.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBeheviorKT/Trap/Trap.cs" root0="FORCE_HIGHLIGHTING" />
@@ -31,10 +45,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/Inventory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/MagnetToPlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/MenuManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/PassiveCoins.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/Singltone.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/UpgradeManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/Upgrader/BuyStation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Nuclear_reactor/WalletUi.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/OP_Tools/Editor/FloatRangeSliderDrawer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpaceInveidors/AudioService.cs" root0="FORCE_HIGHLIGHTING" />
@@ -63,61 +75,61 @@
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.4757905428385039" />
-      <entry key="MS500" value="3.4966500612909255" />
-      <entry key="S2" value="6.4974376184747475" />
-      <entry key="S5" value="7.915487495572427" />
-      <entry key="S10" value="8.826581437253273" />
-      <entry key="S30" value="11.605639969443969" />
-      <entry key="S60" value="18.946416683716556" />
-      <entry key="M2" value="33.73115344919791" />
-      <entry key="M5" value="56.259825951669654" />
-      <entry key="M10" value="75.07006505396308" />
-      <entry key="M15" value="92.9600978813579" />
-      <entry key="M30" value="155.39209399834553" />
-      <entry key="H1" value="268.5831645193183" />
-      <entry key="H2" value="398.474421292336" />
-      <entry key="H4" value="502.32002536953854" />
-      <entry key="D1" value="620.0921269304184" />
-      <entry key="W1" value="643.9129105423293" />
+      <entry key="MS100" value="3.2106882855737214E-5" />
+      <entry key="MS500" value="0.1924384147629041" />
+      <entry key="S2" value="1.10407873561544" />
+      <entry key="S5" value="1.5758120534195694" />
+      <entry key="S10" value="1.7750675092566008" />
+      <entry key="S30" value="1.9247475749508909" />
+      <entry key="S60" value="2.035644497742873" />
+      <entry key="M2" value="2.4682303461299244" />
+      <entry key="M5" value="7.449253190976317" />
+      <entry key="M10" value="27.888296114198145" />
+      <entry key="M15" value="52.93854253407486" />
+      <entry key="M30" value="126.71280966065555" />
+      <entry key="H1" value="258.21169386167855" />
+      <entry key="H2" value="438.31380881983534" />
+      <entry key="H4" value="607.9386322010839" />
+      <entry key="D1" value="827.0603089811208" />
+      <entry key="W1" value="874.7136270532118" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="9.903740239422099E-56" />
-      <entry key="MS500" value="1.038711970059301E-11" />
-      <entry key="S2" value="0.0025758752857240356" />
-      <entry key="S5" value="0.13708086972610362" />
-      <entry key="S10" value="0.5219450899626669" />
-      <entry key="S30" value="1.3037852899543148" />
-      <entry key="S60" value="1.9085661078816918" />
-      <entry key="M2" value="2.885105292684155" />
-      <entry key="M5" value="4.414673450719423" />
-      <entry key="M10" value="6.66270382633212" />
-      <entry key="M15" value="10.172187910871129" />
-      <entry key="M30" value="24.11986715087215" />
-      <entry key="H1" value="49.64214975547543" />
-      <entry key="H2" value="78.70082541484294" />
-      <entry key="H4" value="101.78703547588812" />
-      <entry key="D1" value="127.84292872564566" />
-      <entry key="W1" value="133.09868740244448" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0" />
+      <entry key="S10" value="1.0" />
+      <entry key="S30" value="1.000000036257696" />
+      <entry key="S60" value="1.0004579943471776" />
+      <entry key="M2" value="1.0664653884422508" />
+      <entry key="M5" value="3.1791071615892177" />
+      <entry key="M10" value="10.774364684968436" />
+      <entry key="M15" value="18.968948302749858" />
+      <entry key="M30" value="39.7609545255221" />
+      <entry key="H1" value="71.87788425637224" />
+      <entry key="H2" value="113.33771068418051" />
+      <entry key="H4" value="151.6061332258948" />
+      <entry key="D1" value="200.55871765175672" />
+      <entry key="W1" value="211.15822678040527" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.1304399832963357" />
-      <entry key="MS500" value="3.30813082709318" />
-      <entry key="S2" value="6.3537174721878324" />
-      <entry key="S5" value="7.9493179808592345" />
-      <entry key="S10" value="9.258025555115129" />
-      <entry key="S30" value="12.84595733559388" />
-      <entry key="S60" value="20.779472285957752" />
-      <entry key="M2" value="36.52501614386153" />
-      <entry key="M5" value="60.60310437720629" />
-      <entry key="M10" value="81.68102157782225" />
-      <entry key="M15" value="103.08443968761658" />
-      <entry key="M30" value="179.4603357120127" />
-      <entry key="H1" value="318.1724507156044" />
-      <entry key="H2" value="477.13296184073147" />
-      <entry key="H4" value="604.0795464253323" />
-      <entry key="D1" value="747.9292636904522" />
-      <entry key="W1" value="777.0107356586637" />
+      <entry key="MS100" value="2.323481679896272E-4" />
+      <entry key="MS500" value="0.26219680434353954" />
+      <entry key="S2" value="1.4620354790901613" />
+      <entry key="S5" value="2.2227813451742917" />
+      <entry key="S10" value="2.5767120913652075" />
+      <entry key="S30" value="2.852998708379953" />
+      <entry key="S60" value="2.998552563640836" />
+      <entry key="M2" value="3.5120962382828886" />
+      <entry key="M5" value="10.591471453542615" />
+      <entry key="M10" value="38.59610032100487" />
+      <entry key="M15" value="71.83031618034116" />
+      <entry key="M30" value="166.39505152794362" />
+      <entry key="H1" value="330.0185389921417" />
+      <entry key="H2" value="551.5946559495464" />
+      <entry key="H4" value="759.5062378266696" />
+      <entry key="D1" value="1027.610421414267" />
+      <entry key="W1" value="1085.8705564992958" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -161,7 +173,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$USER_HOME$/Unity/Hub/Editor/6000.5.8f1/Editor/Unity" />
+      <option name="EXE_PATH" value="$USER_HOME$/Unity/Hub/Editor/6000.5.8f1/Editor/Unity.bin" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\Administrator\UnitySemestr3 -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\Administrator\UnitySemestr3" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -171,7 +183,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$USER_HOME$/Unity/Hub/Editor/6000.5.8f1/Editor/Unity" />
+      <option name="EXE_PATH" value="$USER_HOME$/Unity/Hub/Editor/6000.5.8f1/Editor/Unity.bin" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\Administrator\UnitySemestr3 -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\Administrator\UnitySemestr3" />
       <option name="PASS_PARENT_ENVS" value="1" />
